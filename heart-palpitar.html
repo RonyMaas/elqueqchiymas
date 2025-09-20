@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Para tí</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no,  initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+        <meta name="theme-color" content="#A900FF">
+        <meta name="autor" content="Rony Maas">
+        <meta name="description" content="Para tí si la aceptas">
+        <meta name="revised" content="07/01/2023 00:30 hrs GTM">
+        <style>
+            body { 
+    margin: 0; 
+    padding: 0;
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+    background: #0B1522;
+}
+
+.heart {
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    position: relative;
+    transform: rotate(45deg);
+    box-shadow: -20px 20px 150px #F20044;
+    animation: palpitar 0.4s linear infinite alternate;
+}
+
+.contenido {
+    position: fixed;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+h2, h3 {
+    color: white;
+    animation: palpitartext 0.4s linear infinite alternate;
+}
+
+@keyframes palpitartext {
+    0%{transform: scale(1.10);}
+    80%{transform: scale(1.0);}
+    100%{transform: scale(0.7);}
+}
+
+@keyframes palpitar {
+    0%{transform: rotate(45deg) scale(1.10);}
+    80%{transform: rotate(45deg) scale(1.0);}
+    100%{transform: rotate(45deg) scale(0.7);}
+}
+
+.heart::before {
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: red;
+    right: 50%;
+    border-radius: 50%;
+    box-shadow: 20px 20px 150px #F20044;
+}
+
+.heart::after {
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: red;
+    top: -50%;
+    border-radius: 50%;
+    box-shadow: 20px 20px 150px #F20044;
+}
+        </style>
+        <!--<link rel="stylesheet" href="estilos/heart-palpitar.css">-->
+    </head>
+    <body>
+        <div class="heart"></div>
+        <div class="contenido">
+            <h2 class="neon1">Con cariño para tí</h2>
+            <h2 class="neon">De: Rony Maás</h2>
+        </div>
+    </body>
+</html>
