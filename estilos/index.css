@@ -1,9 +1,14 @@
+.grid1 main {
+    grid-area: main;
+    flex-direction: column;
+}
+
 .grid1 main h1 {
     text-align: center;
     font-family: "Algerian";
     margin: 10px;
     font-size: 50px;
-    color: #FF0008;
+    color: #ff0008;
 }
 
 .grid1 main .nuevo {
@@ -23,7 +28,7 @@
 
 .grid1 main .nuevo_link a {
     font-size: 25px;
-    color: #FF0076;
+    color: #ff0076;
     margin: 0 0 10px 0;
 }
 
@@ -62,12 +67,12 @@
     margin: 10px 0;
     padding: 10px;
     border-radius: 20px;
-    border: 3px solid #0020FF;
+    border: 3px solid #0020ff;
 }
 
 .grid1 main .h3fras {
     text-transform: uppercase;
-    color: #FF00AA;
+    color: #ff00aa;
     text-shadow: 5px 5px 5px #777;
 }
 
@@ -76,15 +81,25 @@
     margin: 5px 0;
 }
 
-@media screen and (max-width: 900px) {
+/* PANTALLA TABLET*/
+@media screen and (max-width: 850px) {
+    .grid1 {
+        width: 100%;
+        grid-area: main;
+    }
 
+    .grid1 main h1 {
+        font-size: 35px;
+    }
 }
 
+/* PANTALLA MOVIL*/
 @media screen and (max-width: 600px) {
-    .grid1 main .frases .frase p {
-        font-size: 20px;
+    .grid1 {
+        width: 100%;
     }
+
     .grid1 main h1 {
-        font-size: 40px;
+        font-size: 25px;
     }
 }
