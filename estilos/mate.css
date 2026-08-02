@@ -1,0 +1,66 @@
+.grid1 main h1 {
+    font-family: "Algerian";
+    margin: 10px;
+    font-size: 50px;
+    color: #FF0008;
+}
+
+.grid1 main .cardinales {
+    width: 100%;
+    
+}
+
+.grid1 main .cardinales h2, .grid1 main .cardinales h3 {
+    text-align: center;
+}
+
+.grid1 main .numeros {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.grid1 main .numeros p {
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.grid1 main .numeros p:hover {
+    font-weight:bold;
+    color: #0629f1;
+    font-size: 25px;
+}
+
+.grid1 main .links_mate {
+    margin: 20px 0px 20px 0px;
+}
+
+.grid1 main .links_mate p {
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+@media screen and (max-width: 900px) {
+    .grid1 main .numeros {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .grid1 main .links_mate {
+        justify-content: right;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid1 main .numeros {
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .grid1 main h1 {
+        font-size: 40px;
+    }
+}

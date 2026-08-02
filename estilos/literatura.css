@@ -1,0 +1,94 @@
+.grid1 main {
+    grid-area: main;
+    flex-direction: column;
+}
+
+.grid1 main .adivinanzas {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid1 main .adivinanzas .adiv_tar {
+    width: calc(33.33333% - 20px);
+    height: 200px;
+    perspective: 1000px;
+    margin: 10px;
+}
+
+.grid1 main .adivinanzas .adiv_tar:focus .adiv_tar_cont {
+    transform: rotateY(180deg);
+}
+
+.grid1 main .adivinanzas .adiv_tar_cont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.grid1 main .adivinanzas .adiv_tar .adiv_tar_frente {
+    width: 70%;
+    height: 80%;
+    border-radius: 100px 0px 100px 0px;
+}
+
+.grid1 main .adivinanzas .adiv_tar .adiv_tar_frente,
+.grid1 main .adivinanzas .adiv_tar .adiv_tar_detras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+}
+
+.grid1 main .adivinanzas .adiv_tar .adiv_tar_frente {
+    background-color: #ffb700;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid1 main .adivinanzas .adiv_tar .adiv_tar_detras {
+    background-color: #ff6c00;
+    transform: rotateY(180deg);
+    color: #000;
+    justify-content: center;
+    align-items: center;
+}
+
+/*PANTALLA TABLET*/
+@media screen and (max-width: 850px) {
+    .grid1 {
+        width: 100%;
+        grid-area: main;
+    }
+    .grid1 main h1 {
+        font-size: 35px;
+    }
+
+    .grid1 main .adivinanzas .adiv_tar {
+        width: calc(50% - 20px);
+        height: 200px;
+    }
+}
+
+/* PANTALLA MOVIL*/
+@media screen and (max-width: 600px) {
+    .grid1 {
+        width: 100%;
+    }
+    .grid1 main h1 {
+        font-size: 25px;
+    }
+
+    .grid1 main .adivinanzas .adiv_tar {
+        width: 100%;
+    }
+}

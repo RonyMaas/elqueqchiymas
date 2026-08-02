@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+svg {
+	width: 400px;
+	
+}
+
+.tooltip {
+	position: absolute;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	display: none;
+}
+
+/*.tooltip p {
+	color: #15f206;
+	font-size: 25px;
+}*/
