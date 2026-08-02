@@ -3,6 +3,16 @@
     flex-direction: column;
 }
 
+p {
+    font-size: 20px;
+}
+
+h2,
+h3 {
+    text-align: center;
+    margin-top: 25px;
+}
+
 .grid1 main .adivinanzas {
     width: 100%;
     display: flex;
@@ -50,13 +60,13 @@
 }
 
 .grid1 main .adivinanzas .adiv_tar .adiv_tar_frente {
-    background-color: #ffb700;
+    background-color: #f0d696;
     justify-content: center;
     align-items: center;
 }
 
 .grid1 main .adivinanzas .adiv_tar .adiv_tar_detras {
-    background-color: #ff6c00;
+    background-color: #e68e4f;
     transform: rotateY(180deg);
     color: #000;
     justify-content: center;
@@ -64,11 +74,12 @@
 }
 
 /*PANTALLA TABLET*/
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
     .grid1 {
         width: 100%;
         grid-area: main;
     }
+
     .grid1 main h1 {
         font-size: 35px;
     }
@@ -84,11 +95,26 @@
     .grid1 {
         width: 100%;
     }
+
+    .grid1 main {
+        flex-direction: row;
+    }
+
     .grid1 main h1 {
         font-size: 25px;
     }
 
     .grid1 main .adivinanzas .adiv_tar {
         width: 100%;
+    }
+
+    .grid1 main .adivinanzas {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    p {
+        font-size: 17px;
     }
 }
